@@ -1,0 +1,66 @@
+﻿@model List<PlusConsultingCodeTest_Infrastructure.Product>
+
+@{
+	ViewBag.Title = "Product List";
+}
+
+@section css{
+	<style>
+		.not-active {
+			pointer-events: none;
+			cursor: default;
+		}
+	</style>
+}
+
+<h2>Product List</h2>
+<div id="product-grid">
+	<table id="product-table" class="table table-striped">
+		<thead>
+		<tr>
+			<td>Name</td>
+			<td>Number</td>
+			<td>Color</td>
+			<td>Stock Level</td>
+			<td>Reorder Point</td>
+			<td>Cost</td>
+			<td>List Price</td>
+			<td>&nbsp;</td>
+		</tr>
+		</thead>
+		<tbody id="product-table-body"></tbody>
+		<tfoot>
+		<tr>
+			<td><input type="text" id="productName" required/></td>
+			<td><span style="font-size: smaller; font-style: italic">auto set</span></td>
+			<td><input type="color" id="productColor" required /></td>
+			<td><input type="number" id="productStockLevel" required /></td>
+			<td><input type="number" id="productReorder" required /></td>
+			<td><input type="number" id="productCost"  required/></td>
+			<td><input type="number" id="productListPrice" required /></td>
+			<td><input type="button" class="btn btn-default" name="add-product-button" id="add-product-button" value="Add" /></td>
+		</tr>
+		</tfoot>
+	</table>
+	<a href="#" id="back-button" data-page="1">&lt; prev</a>&nbsp;|&nbsp;<a href="#" id="forward-button" data-page="2">next &gt;</a>
+</div>
+
+
+<!-- TEMPLATES -->
+
+<script type="text/x-jQuery-tmpl" id="gridRow">
+	<tr>
+		<td>${ProductName}</td>
+		<td>${ProductNumber}</td>
+		<td>${Color}</td>
+		<td>${SafetyStockLevel}</td>
+		<td>${ReorderPoint}</td>
+		<td>${StandardCost}</td>
+		<td>${ListPrice}</td>
+		<td>&nbsp;</td>
+	</tr>
+</script>
+
+@section scripts{
+	<script src="../../Scripts/project/products-script.js"></script>
+}
