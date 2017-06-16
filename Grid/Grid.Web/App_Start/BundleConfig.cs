@@ -17,6 +17,8 @@ namespace Grid.Web
             bundles.Add(new StyleBundle("~/Content/css").Include(
                 "~/Content/bootstrap.css",
                 "~/Content/bootstrap-theme.css",
+                "~/Content/DataTables/jquery.dataTables.css",
+                "~/Content/DataTables/dataTables.bootstrap.css",
                 "~/Content/site.css"));
         }
     }
