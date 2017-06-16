@@ -1,0 +1,16 @@
+﻿@model Grid.Web.Models.Home.IndexViewModel
+
+@{
+    ViewBag.Title = "Grid";
+}
+
+@section scripts
+{
+    <script src="~/Scripts/pages/home/index.js"></script>
+}
+
+<h2>Products</h2>
+
+@{ Html.RenderPartial("AddNewProduct", Model); }
+
+@{ Html.RenderPartial("ProductsList", Model); }

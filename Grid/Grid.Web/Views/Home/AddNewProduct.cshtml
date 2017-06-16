@@ -1,0 +1,48 @@
+﻿@model Grid.Web.Models.Home.IndexViewModel
+
+<div class="row">
+    <div class="col-md-3">
+        @using (Html.BeginForm("Save", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="name">Name</label>
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", id = "name", placeholder = "Name" })
+            </div>
+
+            <div class="form-group">
+                <label for="color">Color</label>
+                @Html.DropDownListFor(x => x.SelectedColor, Model.ColorSelectListItems, "Select one", new { @class = "form-control", id = "color", placeholder = "Color" })
+            </div>
+
+            <div class="form-group">
+                <label for="safetyStockLevel">Safety stock level</label>
+                @Html.TextBoxFor(x => x.SafetyStockLevel, new { @class = "form-control", id = "safetyStockLevel", placeholder = "Safety stock level" })
+            </div>
+
+            <div class="form-group">
+                <label for="reorderPoint">Reorder Point</label>
+                @Html.TextBoxFor(x => x.ReorderPoint, new { @class = "form-control", id = "reorderPoint", placeholder = "Reorder point" })
+            </div>
+
+            <div class="form-group">
+                <label for="standardCost">Standard Cost</label>
+                @Html.TextBoxFor(x => x.StandardCost, new { @class = "form-control", id = "standardCost", placeholder = "Standard cost" })
+            </div>
+
+            <div class="form-group">
+                <label for="listPrice">List Price</label>
+                @Html.TextBoxFor(x => x.ListPrice, new { @class = "form-control", id = "listPrice", placeholder = "List price" })
+            </div>
+
+            <button type="submit" class="btn btn-primary">Add Product</button>
+        }
+    </div>
+    <div class="col-md-9"></div>
+    
+    <div class="col-md-3">
+        @Html.ValidationSummary()
+    </div>
+</div>
+
+<br />
+<br />
