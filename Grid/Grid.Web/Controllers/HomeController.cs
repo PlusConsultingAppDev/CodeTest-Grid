@@ -33,9 +33,12 @@ namespace Grid.Web.Controllers
             viewModel.Initialize(repository);
 
             if (ModelState.IsValid)
+            {
                 viewModel.Save();
-
-            return View("Index", viewModel);
+                return RedirectToAction("Index");
+            }
+            else
+                return View("Index", viewModel);
         }
     }
 }

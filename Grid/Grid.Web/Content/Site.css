@@ -1,1 +1,26 @@
-﻿
+﻿.field-validation-error {
+    color: #f00 !important;
+}
+
+.field-validation-valid {
+    display: none !important;
+}
+
+.input-validation-error {
+    border: 1px solid #f00 !important;
+    background-color: #fee !important;
+}
+
+.validation-summary-errors {
+    font-weight: bold !important;
+    color: #f00 !important;
+}
+
+.validation-summary-valid {
+    display: none !important;
+}
+
+.mainContent {
+    margin-left: 20px;
+    margin-right: 20px;
+}
