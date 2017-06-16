@@ -26,5 +26,16 @@ namespace Grid.Web.Controllers
 
             return View(viewModel);
         }
+
+        [HttpPost]
+        public ActionResult Save(IndexViewModel viewModel)
+        {
+            viewModel.Initialize(repository);
+
+            if (ModelState.IsValid)
+                viewModel.Save();
+
+            return View("Index", viewModel);
+        }
     }
 }
