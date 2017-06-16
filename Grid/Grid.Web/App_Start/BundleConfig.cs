@@ -11,6 +11,7 @@ namespace Grid.Web
             bundles.Add(new ScriptBundle("~/bundles/scripts").Include(
                         "~/Scripts/jquery-{version}.js",
                         "~/Scripts/jquery.validate*",
+                        "~/Scripts/DataTables/jquery.dataTables.js",
                         "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
