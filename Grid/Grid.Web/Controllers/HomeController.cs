@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Grid.Domain.Abstract;
+using Grid.Web.Models.Home;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,23 +10,21 @@ namespace Grid.Web.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IRepository repository;
+
+        public HomeController(IRepository repo)
+        {
+            repository = repo;
+        }
+
+
+
         public ActionResult Index()
         {
-            return View();
-        }
+            IndexViewModel viewModel = new IndexViewModel();
+            viewModel.Initialize(repository);
 
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return View(viewModel);
         }
     }
 }

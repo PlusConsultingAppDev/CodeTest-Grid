@@ -52,6 +52,7 @@
     <Compile Include="Concrete\EFRepository.cs" />
     <Compile Include="Data\Contexts\EFDbContext.cs" />
     <Compile Include="Data\Entities\Product.cs" />
+    <Compile Include="DTOs\ProductDto.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />
