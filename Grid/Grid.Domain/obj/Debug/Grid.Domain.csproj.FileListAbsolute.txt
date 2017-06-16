@@ -1,0 +1,10 @@
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\Grid.Domain.dll.config
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\Grid.Domain.dll
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\Grid.Domain.pdb
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\EntityFramework.dll
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\EntityFramework.SqlServer.dll
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\EntityFramework.xml
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\bin\Debug\EntityFramework.SqlServer.xml
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\obj\Debug\Grid.Domain.csprojResolveAssemblyReference.cache
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\obj\Debug\Grid.Domain.dll
+D:\GIT\CodeTest-Grid\Grid\Grid.Domain\obj\Debug\Grid.Domain.pdb
