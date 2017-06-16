@@ -16,22 +16,28 @@ namespace Grid.Web.Models.Home
 
 
         [Display(Name = "Name")]
+        [Required]
         public string Name { get; set; }
 
         [Display(Name = "Color")]
+        [Required]
         public string SelectedColor { get; set; }
         public List<SelectListItem> ColorSelectListItems { get; private set; }
 
         [Display(Name = "Safety Stock Level")]
+        [Required]
         public int? SafetyStockLevel { get; set; }
 
         [Display(Name = "Reorder Point")]
+        [Required]
         public int? ReorderPoint { get; set; }
 
         [Display(Name = "Standard Cost")]
+        [Required]
         public decimal? StandardCost { get; set; }
 
         [Display(Name = "List Price")]
+        [Required]
         public decimal? ListPrice { get; set; }
 
 
