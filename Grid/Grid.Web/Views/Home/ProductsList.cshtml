@@ -1,0 +1,40 @@
+﻿@model Grid.Web.Models.Home.IndexViewModel
+
+@if (Model.Products != null && Model.Products.Count() > 0)
+{
+    <div class="row">
+        <div class="col-md-12">
+            <table class="table table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Product Number</th>
+                        <th>Color</th>
+                        <th>Safety Stock Level</th>
+                        <th>Reorder Point</th>
+                        <th>Standard Cost</th>
+                        <th>List Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Products)
+                    {
+                        <tr>
+                            <td>@product.Name</td>
+                            <td>@product.Id</td>
+                            <td>@product.Color</td>
+                            <td>@product.SafetyStockLevel</td>
+                            <td>@product.ReorderPoint</td>
+                            <td>@product.StandardCost.ToString("c")</td>
+                            <td>@product.ListPrice.ToString("c")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+}
+else
+{
+    <p>No products found.</p>
+}
